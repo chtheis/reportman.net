@@ -1,0 +1,62 @@
+First download the latest version of reportman libraries for .Net from here:
+http://reportman.dnsalias.net/reportmanserver/reportmannet.rar
+
+Add the following libraries to your solution:
+Reportman.Drawing  - This is the base for rendering, include PDF rendering.
+Reportman.Reporting - This is the base for reporting (transform data into rendered pages using report schemes).
+
+Add the project inside the correct folder, for example Reportman.Drawing.csproj inside Reportman.Drawing2008 if you use Visual Studio 2008.
+
+Add references to both projects in your Web project.
+
+You use the legacy designer to build the reports, using for example ODBC, or OLE DB connections.
+When using linked queries, add the linked fields as parameters to the parameters collection and assign to the "child" dataset, this is a requirement in .Net runtime, if you don't use linked queries just ignore this.
+
+
+1.Create an instance of the report and load the scheme:
+
+Report newreport = new Report();
+
+2. Load the report scheme.
+
+newreport.LoadFromFile("yourpath");
+
+- The path of your report can be tricky if you are working with Web project, to avoid this, I recommend the use report libraries (available in the designer), so reports are stored inside database tables and you can use LoadFromCommand or LoadFromDataReader to load the report scheme from an database command (IDBCommand or IDBDataReader).
+
+
+3. In .net you should provide the connection (IDBConnection) in runtime:
+newreport.DatabaseInfo["YOURALIAS"].Connection = YourConnection; 
+
+4.Optionally a transaction can be provided also.
+newreport.DatabaseInfo["YOURALIAS"].Transaction = YourTransaction;
+
+5.Optionally you can set another sql sentence for any dataset.
+newreport.DataInfo["YOURDATA"].SQLOverride = YourNewSqlSentence
+
+6.Set report parameter values.
+newreport.Params["PARAMNAME1"].Value = yourvalue;
+newreport.Params["PARAMNAME1"].Value = yourvalue;
+
+
+7.Use this code to create the pdf.
+	MemoryStream nresult;
+            using (PrintOutPDF npdfdriver = new PrintOutPDF())
+            {
+                if (npdfdriver.Print(nreport.MetaFile))
+                {
+                    nresult = new MemoryStream();
+                    byte[] narray = npdfdriver.PDFStream.ToArray();
+                    nresult.Write(narray, 0, narray.Length);
+                }
+                else
+                    nresult = new MemoryStream();
+            }
+8.Use the MemoryStream to provide result to your webresult, or write to a file. 
+
+- The stream will be empty if the report has no data to print.
+- Any error will throw an exception you catch it to show the error as a web page information if needed.
+
+
+
+
+

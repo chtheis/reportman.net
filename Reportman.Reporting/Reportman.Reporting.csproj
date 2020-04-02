@@ -1,0 +1,330 @@
+<VisualStudioProject>
+    <CSHARP
+        ProjectType = "Local"
+        ProductVersion = "7.10.6030"
+        SchemaVersion = "2.0"
+        ProjectGuid = "{BC83096A-1A88-423D-A5CD-EC341290BDDD}"
+    >
+        <Build>
+            <Settings
+                ApplicationIcon = ""
+                AssemblyKeyContainerName = ""
+                AssemblyName = "Reportman.Reporting"
+                AssemblyOriginatorKeyFile = ""
+                DefaultClientScript = "JScript"
+                DefaultHTMLPageLayout = "Grid"
+                DefaultTargetSchema = "IE50"
+                DelaySign = "false"
+                OutputType = "Library"
+                PreBuildEvent = ""
+                PostBuildEvent = ""
+                RootNamespace = "Reportman.Reporting"
+                RunPostBuildEvent = "OnBuildSuccess"
+                StartupObject = ""
+            >
+                <Config
+                    Name = "Debug"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "DEBUG;TRACE;REPMAN_DOTNET1;REPMAN_ZLIB;REPMAN_FIREBIRD;REPMAN_SQL;REPMAN_OLEDB;REPMAN_ODBC;REPMAN_ORACLE;REPMAN_DB2_NO;REPMAN_SYBASE;REPMAN_MYSQL;REPMAN_SQLITE;REPMAN_POSTGRESQL"
+                    DocumentationFile = ""
+                    DebugSymbols = "true"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "false"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "false"
+                    OutputPath = "..\output\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+                <Config
+                    Name = "Release"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "TRACE"
+                    DocumentationFile = ""
+                    DebugSymbols = "false"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "false"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "true"
+                    OutputPath = "bin\Release\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+                <Config
+                    Name = "Firebird"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "DEBUG;TRACE;REPMAN_DOTNET1;REPMAN_ZLIB;REPMAN_FIREBIRD"
+                    DocumentationFile = ""
+                    DebugSymbols = "false"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "false"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "false"
+                    OutputPath = "..\output\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+                <Config
+                    Name = "MySQL"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "DEBUG;TRACE;REPMAN_DOTNET1;REPMAN_ZLIB;REPMAN_MYSQL"
+                    DocumentationFile = ""
+                    DebugSymbols = "true"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "true"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "false"
+                    OutputPath = "..\output\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "1"
+                />
+            </Settings>
+            <References>
+                <Reference
+                    Name = "System"
+                    AssemblyName = "System"
+                />
+                <Reference
+                    Name = "System.Data"
+                    AssemblyName = "System.Data"
+                />
+                <Reference
+                    Name = "System.Drawing"
+                    AssemblyName = "System.Drawing"
+                />
+                <Reference
+                    Name = "ICSharpCode.SharpZipLib"
+                    AssemblyName = "ICSharpCode.SharpZipLib"
+                    HintPath = "..\output\ICSharpCode.SharpZipLib.dll"
+                />
+                <Reference
+                    Name = "System.XML"
+                    AssemblyName = "System.Xml"
+                    HintPath = "H:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.XML.dll"
+                />
+                <Reference
+                    Name = "Npgsql"
+                    AssemblyName = "Npgsql"
+                    HintPath = "..\output\Npgsql.dll"
+                />
+                <Reference
+                    Name = "Mono.Data.SqliteClient"
+                    AssemblyName = "Mono.Data.SqliteClient"
+                    HintPath = "..\output\Mono.Data.SqliteClient.dll"
+                />
+                <Reference
+                    Name = "Mono.Data.SybaseClient"
+                    AssemblyName = "Mono.Data.SybaseClient"
+                    HintPath = "..\output\Mono.Data.SybaseClient.dll"
+                />
+                <Reference
+                    Name = "Mono.Security"
+                    AssemblyName = "Mono.Security"
+                    HintPath = "..\output\Mono.Security.dll"
+                />
+                <Reference
+                    Name = "MySql.Data"
+                    AssemblyName = "MySql.Data"
+                    HintPath = "..\output\MySql.Data.dll"
+                />
+                <Reference
+                    Name = "FirebirdSql.Data.Firebird"
+                    AssemblyName = "FirebirdSql.Data.Firebird"
+                    HintPath = "..\output\FirebirdSql.Data.Firebird.dll"
+                />
+                <Reference
+                    Name = "System.Data.OracleClient"
+                    AssemblyName = "System.Data.OracleClient"
+                    HintPath = "H:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Data.OracleClient.dll"
+                />
+                <Reference
+                    Name = "Reportman.Drawing"
+                    Project = "{BC83096A-1A88-423D-A5CD-EC341290BDDD}"
+                    Package = "{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"
+                />
+            </References>
+        </Build>
+        <Files>
+            <Include>
+                <File
+                    RelPath = "AssemblyInfo.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "datasetalias.ico"
+                    BuildAction = "EmbeddedResource"
+                    CustomToolNamespace = "Reportman.Reporting"
+                />
+                <File
+                    RelPath = "evaluator.ico"
+                    BuildAction = "EmbeddedResource"
+                    CustomToolNamespace = "Reportman.Reporting"
+                />
+                <File
+                    RelPath = "rpalias.cs"
+                    Link = "..\rpalias.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "rpalias.resx"
+                    Link = "..\rpalias.resx"
+                    DependentUpon = "rpalias.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "rpbarcodeitem.cs"
+                    Link = "..\rpbarcodeitem.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "rpbasereport.cs"
+                    Link = "..\rpbasereport.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "rpchartitem.cs"
+                    Link = "..\rpchartitem.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "rpdatainfo.cs"
+                    Link = "..\rpdatainfo.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "rpdataset.cs"
+                    Link = "..\rpdataset.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "rpdataset.resx"
+                    Link = "..\rpdataset.resx"
+                    DependentUpon = "rpdataset.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "rpdatatable.cs"
+                    Link = "..\rpdatatable.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "rpdrawitem.cs"
+                    Link = "..\rpdrawitem.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "rpeval.cs"
+                    Link = "..\rpeval.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "rpeval.resx"
+                    Link = "..\rpeval.resx"
+                    DependentUpon = "rpeval.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "rpevalfunc.cs"
+                    Link = "..\rpevalfunc.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "rplabelitem.cs"
+                    Link = "..\rplabelitem.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "rpparams.cs"
+                    Link = "..\rpparams.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "rpparser.cs"
+                    Link = "..\rpparser.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "rpprintitem.cs"
+                    Link = "..\rpprintitem.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "rpreport.cs"
+                    Link = "..\rpreport.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "rpsection.cs"
+                    Link = "..\rpsection.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "rpsubreport.cs"
+                    Link = "..\rpsubreport.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "rptypeval.cs"
+                    Link = "..\rptypeval.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "rpvariant.cs"
+                    Link = "..\rpvariant.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "rpxmlstream.cs"
+                    Link = "..\rpxmlstream.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+            </Include>
+        </Files>
+    </CSHARP>
+</VisualStudioProject>
+

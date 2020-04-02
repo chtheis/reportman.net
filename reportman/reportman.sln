@@ -1,0 +1,64 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reportman.Drawing", "..\Reportman.Drawing\Reportman.Drawing.csproj", "{BC83096A-1A88-423D-A5CD-EC341290BDDD}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reportman.Reporting", "..\Reportman.Reporting\Reportman.Reporting.csproj", "{BC83096A-1A88-423D-A5CD-EC341290BDDD}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reportman.Drawing.Forms", "..\Reportman.Drawing.Forms\Reportman.Drawing.Forms.csproj", "{BC83096A-1A88-423D-A5CD-EC341290BDDD}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reportman.Reporting.Forms", "..\Reportman.Reporting.Forms\Reportman.Reporting.Forms.csproj", "{BC83096A-1A88-423D-A5CD-EC341290BDDD}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "printreport", "..\printreport\printreport.csproj", "{B1D61008-856A-4B0A-96A9-F5F53E059ADA}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Firebird = Firebird
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{BC83096A-1A88-423D-A5CD-EC341290BDDD}.Debug.ActiveCfg = Debug|.NET
+		{BC83096A-1A88-423D-A5CD-EC341290BDDD}.Debug.Build.0 = Debug|.NET
+		{BC83096A-1A88-423D-A5CD-EC341290BDDD}.Firebird.ActiveCfg = Firebird|.NET
+		{BC83096A-1A88-423D-A5CD-EC341290BDDD}.Firebird.Build.0 = Firebird|.NET
+		{BC83096A-1A88-423D-A5CD-EC341290BDDD}.Release.ActiveCfg = Release|.NET
+		{BC83096A-1A88-423D-A5CD-EC341290BDDD}.Release.Build.0 = Release|.NET
+		{BC83096A-1A88-423D-A5CD-EC341290BDDD}.Debug.ActiveCfg = Debug|.NET
+		{BC83096A-1A88-423D-A5CD-EC341290BDDD}.Debug.Build.0 = Debug|.NET
+		{BC83096A-1A88-423D-A5CD-EC341290BDDD}.Firebird.ActiveCfg = Firebird|.NET
+		{BC83096A-1A88-423D-A5CD-EC341290BDDD}.Firebird.Build.0 = Firebird|.NET
+		{BC83096A-1A88-423D-A5CD-EC341290BDDD}.Release.ActiveCfg = Release|.NET
+		{BC83096A-1A88-423D-A5CD-EC341290BDDD}.Release.Build.0 = Release|.NET
+		{BC83096A-1A88-423D-A5CD-EC341290BDDD}.Debug.ActiveCfg = Debug|.NET
+		{BC83096A-1A88-423D-A5CD-EC341290BDDD}.Debug.Build.0 = Debug|.NET
+		{BC83096A-1A88-423D-A5CD-EC341290BDDD}.Firebird.ActiveCfg = Firebird|.NET
+		{BC83096A-1A88-423D-A5CD-EC341290BDDD}.Firebird.Build.0 = Firebird|.NET
+		{BC83096A-1A88-423D-A5CD-EC341290BDDD}.Release.ActiveCfg = Release|.NET
+		{BC83096A-1A88-423D-A5CD-EC341290BDDD}.Release.Build.0 = Release|.NET
+		{BC83096A-1A88-423D-A5CD-EC341290BDDD}.Debug.ActiveCfg = Debug|.NET
+		{BC83096A-1A88-423D-A5CD-EC341290BDDD}.Debug.Build.0 = Debug|.NET
+		{BC83096A-1A88-423D-A5CD-EC341290BDDD}.Firebird.ActiveCfg = Firebird|.NET
+		{BC83096A-1A88-423D-A5CD-EC341290BDDD}.Firebird.Build.0 = Firebird|.NET
+		{BC83096A-1A88-423D-A5CD-EC341290BDDD}.Release.ActiveCfg = Release|.NET
+		{BC83096A-1A88-423D-A5CD-EC341290BDDD}.Release.Build.0 = Release|.NET
+		{B1D61008-856A-4B0A-96A9-F5F53E059ADA}.Debug.ActiveCfg = Debug|.NET
+		{B1D61008-856A-4B0A-96A9-F5F53E059ADA}.Debug.Build.0 = Debug|.NET
+		{B1D61008-856A-4B0A-96A9-F5F53E059ADA}.Firebird.ActiveCfg = Firebird|.NET
+		{B1D61008-856A-4B0A-96A9-F5F53E059ADA}.Firebird.Build.0 = Firebird|.NET
+		{B1D61008-856A-4B0A-96A9-F5F53E059ADA}.Release.ActiveCfg = Release|.NET
+		{B1D61008-856A-4B0A-96A9-F5F53E059ADA}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

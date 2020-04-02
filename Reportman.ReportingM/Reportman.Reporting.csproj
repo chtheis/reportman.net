@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D30C3674-7E08-431F-AEDC-B0FAF2D82F97}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>Resources\evaluator.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Reportman.Reporting</AssemblyName>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Reportman.Reporting</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>http://localhost/Reportman.Reporting/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug</OutputPath>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DocumentationFile>
+    </DocumentationFile>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE;REPMAN_DOTNET2;REPMAN_ZLIB</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;REPMAN_DOTNET2;REPMAN_ZLIB</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;REPMAN_DOTNET2;REPMAN_ZLIB</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'MonoDebug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\MonoDebug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;REPMAN_DOTNET2;REPMAN_ZLIB</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'MonoDebug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\MonoDebug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;REPMAN_DOTNET2;REPMAN_ZLIB</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\rpalias.resx">
+      <Link>rpalias.resx</Link>
+      <DependentUpon>rpalias.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\rpdataset.resx">
+      <Link>rpdataset.resx</Link>
+      <DependentUpon>rpdataset.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\rpeval.resx">
+      <Link>rpeval.resx</Link>
+      <DependentUpon>rpeval.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="..\rpalias.cs">
+      <Link>rpalias.cs</Link>
+      <SubType>Component</SubType>
+      <CustomToolNamespace>Reportman.Reporting</CustomToolNamespace>
+    </Compile>
+    <Compile Include="..\rpbarcodeitem.cs">
+      <Link>rpbarcodeitem.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\rpbasereport.cs">
+      <Link>rpbasereport.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\rpchartitem.cs">
+      <Link>rpchartitem.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\rpdatainfo.cs">
+      <Link>rpdatainfo.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\rpdataset.cs">
+      <Link>rpdataset.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\rpdatatable.cs">
+      <Link>rpdatatable.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\rpdrawitem.cs">
+      <Link>rpdrawitem.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\rpeval.cs">
+      <Link>rpeval.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\rpevalfunc.cs">
+      <Link>rpevalfunc.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\rplabelitem.cs">
+      <Link>rplabelitem.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\rpparams.cs">
+      <Link>rpparams.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\rpparser.cs">
+      <Link>rpparser.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\rpprintitem.cs">
+      <Link>rpprintitem.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\rpreport.cs">
+      <Link>rpreport.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\rpsection.cs">
+      <Link>rpsection.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\rpsubreport.cs">
+      <Link>rpsubreport.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\rptypeval.cs">
+      <Link>rptypeval.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\rpvariant.cs">
+      <Link>rpvariant.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\rpxmlstream.cs">
+      <Link>rpxmlstream.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="..\rpdbfexport.cs">
+      <Link>rpdbfexport.cs</Link>
+    </Compile>
+    <Compile Include="..\rpqrcodeencoder.cs">
+      <Link>rpqrcodeencoder.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\datasetalias.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\evaluator.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\SharpZipLib\SharpZipLibM\src\ICSharpCode.SharpZLib.csproj">
+      <Project>{0E7413FF-EB9E-4714-ACF2-BE3A6A7B2FFD}</Project>
+      <Name>ICSharpCode.SharpZLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Reportman.DrawingM\Reportman.Drawing.csproj">
+      <Project>{BC83096A-1A88-423D-A5CD-EC341290BDDD}</Project>
+      <Name>Reportman.Drawing</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debugx|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;REPMAN_DOTNET2;REPMAN_ZLIB</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile />
+    <ConfigurationOverrideFile />
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <BaseAddress>285212672</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+    <RegisterForComInterop>false</RegisterForComInterop>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debugx|x86' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debugx</OutputPath>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+</Project>

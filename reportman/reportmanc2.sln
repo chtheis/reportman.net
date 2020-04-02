@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reportman.Drawing", "..\Reportman.Drawingc2\Reportman.Drawing.csproj", "{8A76BEE3-8E12-4EAF-B164-1D03EDF92035}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8A76BEE3-8E12-4EAF-B164-1D03EDF92035}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A76BEE3-8E12-4EAF-B164-1D03EDF92035}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A76BEE3-8E12-4EAF-B164-1D03EDF92035}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A76BEE3-8E12-4EAF-B164-1D03EDF92035}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

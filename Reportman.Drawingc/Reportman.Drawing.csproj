@@ -1,0 +1,136 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FBBC3ECB-326C-4516-B852-905870E470CE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Reportman.Drawing</RootNamespace>
+    <AssemblyName>Reportman.Drawing</AssemblyName>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>PocketPC</PlatformFamilyName>
+    <PlatformID>4118C335-430C-497f-BE48-11C3316B135E</PlatformID>
+    <OSVersion>5.1</OSVersion>
+    <DeployDirSuffix>Reportman.Drawing</DeployDirSuffix>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <NativePlatformName>Windows Mobile 5.0 Pocket PC SDK</NativePlatformName>
+    <FormFactorID>
+    </FormFactorID>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;PocketPC;REPMAN_COMPACT;REPMAN_ZLIB</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\rpcollections.cs">
+      <Link>rpcollections.cs</Link>
+    </Compile>
+    <Compile Include="..\rpdataseriealizer.cs">
+      <Link>rpdataseriealizer.cs</Link>
+    </Compile>
+    <Compile Include="..\rpgraphics.cs">
+      <Link>rpgraphics.cs</Link>
+    </Compile>
+    <Compile Include="..\rpinfoprovgdi.cs">
+      <Link>rpinfoprovgdi.cs</Link>
+    </Compile>
+    <Compile Include="..\rpinfoprovid.cs">
+      <Link>rpinfoprovid.cs</Link>
+    </Compile>
+    <Compile Include="..\rpinifile.cs">
+      <Link>rpinifile.cs</Link>
+    </Compile>
+    <Compile Include="..\rpmetafile.cs">
+      <Link>rpmetafile.cs</Link>
+    </Compile>
+    <Compile Include="..\rppdffile.cs">
+      <Link>rppdffile.cs</Link>
+    </Compile>
+    <Compile Include="..\rpprintout.cs">
+      <Link>rpprintout.cs</Link>
+    </Compile>
+    <Compile Include="..\rpprintoutpdf.cs">
+      <Link>rpprintoutpdf.cs</Link>
+    </Compile>
+    <Compile Include="..\rptranslator.cs">
+      <Link>rptranslator.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\rptypes.cs">
+      <Link>rptypes.cs</Link>
+    </Compile>
+    <Compile Include="..\rpupdater.cs">
+      <Link>rpupdater.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rpdatagridtextboxcolumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\rptranslator.resx">
+      <Link>rptranslator.resx</Link>
+      <DependentUpon>rptranslator.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\SharpZipLib\CF\ICSharpCode.SharpZipLib.csproj">
+      <Project>{7FEAB14B-5DB1-4BE4-BDBC-58961730C7E3}</Project>
+      <Name>ICSharpCode.SharpZipLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="PlatformVerificationTask">
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,55 @@
+﻿<project schemaVersion="1.5.2.0">
+    <assemblies>
+        <assembly assemblyPath="..\output2\printreport.exe" xmlCommentsPath="..\output2\printreport.xml" commentsOnly="False" />
+        <assembly assemblyPath="..\output2\Reportman.Drawing.dll" xmlCommentsPath="..\output2\Reportman.Drawing.XML" commentsOnly="False" />
+        <assembly assemblyPath="..\output2\Reportman.Drawing.Forms.dll" xmlCommentsPath="..\output2\Reportman.Drawing.Forms.XML" commentsOnly="False" />
+        <assembly assemblyPath="..\output2\Reportman.Reporting.dll" xmlCommentsPath="..\output2\Reportman.Reporting.XML" commentsOnly="False" />
+        <assembly assemblyPath="..\output2\Reportman.Reporting.Forms.dll" xmlCommentsPath="..\output2\Reportman.Reporting.Forms.XML" commentsOnly="False" />
+    </assemblies>
+    <namespaceSummaries>
+        <namespaceSummaryItem name="" isDocumented="False" />
+        <namespaceSummaryItem name="Reportman.Commands" isDocumented="True" />
+        <namespaceSummaryItem name="Reportman.Drawing" isDocumented="True" />
+        <namespaceSummaryItem name="Reportman.Drawing.Forms" isDocumented="True" />
+        <namespaceSummaryItem name="Reportman.Reporting" isDocumented="True" />
+        <namespaceSummaryItem name="Reportman.Reporting.Forms" isDocumented="True" />
+    </namespaceSummaries>
+    <dependencies>
+        <dependencyItem depPath="..\output2\ICSharpCode.SharpZipLib.dll" />
+    </dependencies>
+    <ProjectSummary />
+    <MissingTags>Summary, Parameter, Returns, AutoDocumentCtors, Namespace</MissingTags>
+    <VisibleItems>InheritedMembers, InheritedFrameworkMembers, Protected, SealedProtected</VisibleItems>
+    <HtmlHelp1xCompilerPath path="" />
+    <HtmlHelp2xCompilerPath path="" />
+    <OutputPath>.\Help\</OutputPath>
+    <SandcastlePath path="" />
+    <WorkingPath path="" />
+    <CleanIntermediates>True</CleanIntermediates>
+    <KeepLogFile>True</KeepLogFile>
+    <HelpFileFormat>HtmlHelp2x</HelpFileFormat>
+    <PurgeDuplicateTopics>True</PurgeDuplicateTopics>
+    <CppCommentsFixup>False</CppCommentsFixup>
+    <FrameworkVersion>2.0.50727</FrameworkVersion>
+    <BinaryTOC>True</BinaryTOC>
+    <IncludeFavorites>False</IncludeFavorites>
+    <Preliminary>False</Preliminary>
+    <RootNamespaceContainer>False</RootNamespaceContainer>
+    <RootNamespaceTitle />
+    <HelpTitle>Report Manager Library Documentation</HelpTitle>
+    <HtmlHelpName>Reportman</HtmlHelpName>
+    <Language>en-US</Language>
+    <CopyrightHref />
+    <CopyrightText />
+    <FeedbackEMailAddress />
+    <HeaderText />
+    <FooterText />
+    <ProjectLinkType>Local</ProjectLinkType>
+    <SdkLinkType>Msdn</SdkLinkType>
+    <PresentationStyle>Prototype</PresentationStyle>
+    <NamingMethod>Guid</NamingMethod>
+    <SyntaxFilters>Standard</SyntaxFilters>
+    <ContentPlacement>AboveNamespaces</ContentPlacement>
+    <ContentSiteMap path="" />
+    <TopicFileTransform path="" />
+</project>

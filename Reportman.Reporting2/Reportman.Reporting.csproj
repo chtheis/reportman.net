@@ -1,0 +1,225 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D30C3674-7E08-431F-AEDC-B0FAF2D82F97}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>Resources\evaluator.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Reportman.Reporting</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Reportman.Reporting</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SignAssembly>false</SignAssembly>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\output2\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;DEBUG;REPMAN_DOTNET2;REPMAN_ZLIB</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE;REPMAN_DOTNET2;REPMAN_ZLIB</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.2.329, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\output2\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\rpalias.resx">
+      <Link>rpalias.resx</Link>
+      <DependentUpon>rpalias.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\rpdataset.resx">
+      <Link>rpdataset.resx</Link>
+      <DependentUpon>rpdataset.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\rpeval.resx">
+      <Link>rpeval.resx</Link>
+      <DependentUpon>rpeval.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="..\rpalias.cs">
+      <Link>rpalias.cs</Link>
+      <SubType>Component</SubType>
+      <CustomToolNamespace>Reportman.Reporting</CustomToolNamespace>
+    </Compile>
+    <Compile Include="..\rpbarcodeitem.cs">
+      <Link>rpbarcodeitem.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\rpbasereport.cs">
+      <Link>rpbasereport.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\rpchartitem.cs">
+      <Link>rpchartitem.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\rpdatainfo.cs">
+      <Link>rpdatainfo.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\rpdataset.cs">
+      <Link>rpdataset.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\rpdatatable.cs">
+      <Link>rpdatatable.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\rpdrawitem.cs">
+      <Link>rpdrawitem.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\rpeval.cs">
+      <Link>rpeval.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\rpevalfunc.cs">
+      <Link>rpevalfunc.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\rplabelitem.cs">
+      <Link>rplabelitem.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\rpparams.cs">
+      <Link>rpparams.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\rpparser.cs">
+      <Link>rpparser.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\rpprintitem.cs">
+      <Link>rpprintitem.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\rpreport.cs">
+      <Link>rpreport.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\rpsection.cs">
+      <Link>rpsection.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\rpsubreport.cs">
+      <Link>rpsubreport.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\rptypeval.cs">
+      <Link>rptypeval.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\rpvariant.cs">
+      <Link>rpvariant.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\rpxmlstream.cs">
+      <Link>rpxmlstream.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\datasetalias.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\evaluator.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Reportman.Drawing2\Reportman.Drawing.csproj">
+      <Project>{BC83096A-1A88-423D-A5CD-EC341290BDDD}</Project>
+      <Name>Reportman.Drawing</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

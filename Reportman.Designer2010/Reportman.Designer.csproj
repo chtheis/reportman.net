@@ -1,0 +1,405 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E0CC2126-5250-41FD-AF84-9F9E7DF2B052}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Reportman.Designer</RootNamespace>
+    <AssemblyName>Reportman.Designer</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <PublishUrl>http://localhost/Reportman.Designer/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\output2\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;REPMAN_DOTNET2;REPMAN_ZLIB</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\output2\Reportman.Designer.XML</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;REPMAN_DOTNET2;REPMAN_ZLIB</DefineConstants>
+    <DocumentationFile>..\output2\Reportman.Designer.XML</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'MonoDebug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\MonoDebug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;REPMAN_DOTNET2;REPMAN_ZLIB</DefineConstants>
+    <DocumentationFile>..\output2\Reportman.Designer.XML</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'MonoDebug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\MonoDebug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;REPMAN_DOTNET2;REPMAN_ZLIB</DefineConstants>
+    <DocumentationFile>..\output2\Reportman.Designer.XML</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\rpmdcolorpicker.cs">
+      <Link>rpmdcolorpicker.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\rpmddatadef.cs">
+      <Link>rpmddatadef.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\rpmddatadef.designer.cs">
+      <Link>rpmddatadef.designer.cs</Link>
+      <DependentUpon>rpmddatadef.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\rpmddesignstructure.cs">
+      <Link>rpmddesignstructure.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\rpmddesignstructure.designer.cs">
+      <Link>rpmddesignstructure.designer.cs</Link>
+      <DependentUpon>rpmddesignstructure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\rpmdeditsubreport.cs">
+      <Link>rpmdeditsubreport.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\rpmdeditsubreport.designer.cs">
+      <Link>rpmdeditsubreport.designer.cs</Link>
+      <DependentUpon>rpmdeditsubreport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\rpmdellipsiseditingcontrol.cs">
+      <Link>rpmdellipsiseditingcontrol.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\rpmdellipsiseditingcontrol.designer.cs">
+      <Link>rpmdellipsiseditingcontrol.designer.cs</Link>
+      <DependentUpon>rpmdellipsiseditingcontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\rpmdfgrid.cs">
+      <Link>rpmdfgrid.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\rpmdfgrid.designer.cs">
+      <Link>rpmdfgrid.designer.cs</Link>
+      <DependentUpon>rpmdfgrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\rpmdfields.cs">
+      <Link>rpmdfields.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\rpmdfields.designer.cs">
+      <Link>rpmdfields.designer.cs</Link>
+      <DependentUpon>rpmdfields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\rpmdinterface.cs">
+      <Link>rpmdinterface.cs</Link>
+    </Compile>
+    <Compile Include="..\rpmdinterfacedata.cs">
+      <Link>rpmdinterfacedata.cs</Link>
+    </Compile>
+    <Compile Include="..\rpmdinterfacesection.cs">
+      <Link>rpmdinterfacesection.cs</Link>
+    </Compile>
+    <Compile Include="..\rpmdinterfaceshape.cs">
+      <Link>rpmdinterfaceshape.cs</Link>
+    </Compile>
+    <Compile Include="..\rpmdmaindesigner.cs">
+      <Link>rpmdmaindesigner.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\rpmdmaindesigner.designer.cs">
+      <Link>rpmdmaindesigner.designer.cs</Link>
+      <DependentUpon>rpmdmaindesigner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\rpmdpropertycolumn.cs">
+      <Link>rpmdpropertycolumn.cs</Link>
+    </Compile>
+    <Compile Include="..\rpmdpropertyframe.cs">
+      <Link>rpmdpropertyframe.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\rpmdpropertyframe.designer.cs">
+      <Link>rpmdpropertyframe.designer.cs</Link>
+      <DependentUpon>rpmdpropertyframe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\rpmdresize.cs">
+      <Link>rpmdresize.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="..\rpmdobjectinspector.cs">
+      <Link>rpmdobjectinspector.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\rpmdobjectinspector.Designer.cs">
+      <DependentUpon>rpmdobjectinspector.cs</DependentUpon>
+      <Link>rpmdobjectinspector.Designer.cs</Link>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\rpmddatadef.resx">
+      <Link>rpmddatadef.resx</Link>
+      <DependentUpon>rpmddatadef.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\rpmddesignstructure.resx">
+      <Link>rpmddesignstructure.resx</Link>
+      <DependentUpon>rpmddesignstructure.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\rpmdeditsubreport.resx">
+      <Link>rpmdeditsubreport.resx</Link>
+      <DependentUpon>rpmdeditsubreport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\rpmdellipsiseditingcontrol.resx">
+      <Link>rpmdellipsiseditingcontrol.resx</Link>
+      <DependentUpon>rpmdellipsiseditingcontrol.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\rpmdfgrid.resx">
+      <Link>rpmdfgrid.resx</Link>
+      <DependentUpon>rpmdfgrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\rpmdfields.resx">
+      <Link>rpmdfields.resx</Link>
+      <DependentUpon>rpmdfields.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\rpmdmaindesigner.resx">
+      <Link>rpmdmaindesigner.resx</Link>
+      <DependentUpon>rpmdmaindesigner.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\rpmdpropertyframe.resx">
+      <Link>rpmdpropertyframe.resx</Link>
+      <DependentUpon>rpmdpropertyframe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aaddreport.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addfolder.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addprops.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alignbottom.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alignhdistance.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alignleft.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alignright.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aligntop.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alignvdistance.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrowdown.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrowup.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barcode.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cut.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\draw.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\execute.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grid.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\label.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newdocument.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pagesetup.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preview2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoom1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoom2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paste.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Reportman.Drawing.Forms2010\Reportman.Drawing.Forms.csproj">
+      <Project>{32161190-2AD5-44EE-8F94-ACB86A3F2F57}</Project>
+      <Name>Reportman.Drawing.Forms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Reportman.Drawing2010\Reportman.Drawing.csproj">
+      <Project>{BC83096A-1A88-423D-A5CD-EC341290BDDD}</Project>
+      <Name>Reportman.Drawing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Reportman.Reporting.Forms2010\Reportman.Reporting.Forms.csproj">
+      <Project>{02894502-43C8-47A9-9317-98A22C98AFE0}</Project>
+      <Name>Reportman.Reporting.Forms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Reportman.Reporting2010\Reportman.Reporting.csproj">
+      <Project>{D30C3674-7E08-431F-AEDC-B0FAF2D82F97}</Project>
+      <Name>Reportman.Reporting</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

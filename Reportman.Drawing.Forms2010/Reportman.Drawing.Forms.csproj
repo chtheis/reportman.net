@@ -1,0 +1,421 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{32161190-2AD5-44EE-8F94-ACB86A3F2F57}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>previewmetafile.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Reportman.Drawing.Forms</AssemblyName>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Reportman.Drawing.Forms</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <PublishUrl>http://localhost/Reportman.Drawing.Forms/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;DEBUG;REPMAN_DOTNET2;REPMAN_ZLIB;WINDOWS</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\output2\</OutputPath>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE;REPMAN_DOTNET2;REPMAN_ZLIB</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;REPMAN_DOTNET2;REPMAN_ZLIB;WINDOWS</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;REPMAN_DOTNET2;REPMAN_ZLIB</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'MonoDebug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\MonoDebug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;REPMAN_DOTNET2;REPMAN_ZLIB</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'MonoDebug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\MonoDebug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;REPMAN_DOTNET2;REPMAN_ZLIB;MONO</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\rpbuttonadvanced.cs">
+      <Link>rpbuttonadvanced.cs</Link>
+    </Compile>
+    <Compile Include="..\rpdatagridview.cs">
+      <Link>rpdatagridview.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\rpdatagridviewcolumnadvanced.cs">
+      <Link>rpdatagridviewcolumnadvanced.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\rpdatagrivviewnumericcolumn.cs">
+      <Link>rpdatagrivviewnumericcolumn.cs</Link>
+    </Compile>
+    <Compile Include="..\rpdataprogress.cs">
+      <Link>rpdataprogress.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\rpdataprogress.designer.cs">
+      <Link>rpdataprogress.designer.cs</Link>
+      <DependentUpon>rpdataprogress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\rpdatetimepicker.cs">
+      <Link>rpdatetimepicker.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\rpgroupbox.cs">
+      <Link>rpgroupbox.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\rpinputbox.cs">
+      <Link>rpinputbox.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\rpmessageapi.cs">
+      <Link>rpmessageapi.cs</Link>
+    </Compile>
+    <Compile Include="..\rpmessageboxerror.cs">
+      <Link>rpmessageboxerror.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\rppreviewformscontrol.cs">
+      <Link>rppreviewformscontrol.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\rppreviewformscontrol.designer.cs">
+      <Link>rppreviewformscontrol.designer.cs</Link>
+      <DependentUpon>rppreviewformscontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\rppreviewmeta.cs">
+      <Link>rppreviewmeta.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\rpprinterconfig.cs">
+      <Link>rpprinterconfig.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\rpprinterconfig.designer.cs">
+      <Link>rpprinterconfig.designer.cs</Link>
+      <DependentUpon>rpprinterconfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\rpprintraw.cs">
+      <Link>rpprintraw.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\rpprintwinforms.cs">
+      <Link>rpprintwinforms.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\rpprogressbar.cs">
+      <Link>rpprogressbar.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\rpradiogroup.cs">
+      <Link>rpradiogroup.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\rpradiogroup.Designer.cs">
+      <Link>rpradiogroup.Designer.cs</Link>
+      <DependentUpon>rpradiogroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\rpreportprogress.cs">
+      <Link>rpreportprogress.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\rpruler.cs">
+      <Link>rpruler.cs</Link>
+    </Compile>
+    <Compile Include="..\rpscreenkeyboard.cs">
+      <Link>rpscreenkeyboard.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\rpscreenkeyboard.designer.cs">
+      <Link>rpscreenkeyboard.designer.cs</Link>
+      <DependentUpon>rpscreenkeyboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\rpsignaturecontrol.cs">
+      <Link>rpsignaturecontrol.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\rpsignaturecontrol.designer.cs">
+      <Link>rpsignaturecontrol.designer.cs</Link>
+      <DependentUpon>rpsignaturecontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\rptabcontrol.cs">
+      <Link>rptabcontrol.cs</Link>
+    </Compile>
+    <Compile Include="..\rptabcontrol.designer.cs">
+      <Link>rptabcontrol.designer.cs</Link>
+      <DependentUpon>rptabcontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\rptabpageadvanced.cs">
+      <Link>rptabpageadvanced.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\rptooltip.cs">
+      <Link>rptooltip.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\rptreegrid.cs">
+      <Link>rptreegrid.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\rptreegridnode.cs">
+      <Link>rptreegridnode.cs</Link>
+    </Compile>
+    <Compile Include="..\rptreegridview.cs">
+      <Link>rptreegridview.cs</Link>
+    </Compile>
+    <Compile Include="..\rpupdaterform.cs">
+      <Link>rpupdaterform.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\rpupdaterform.designer.cs">
+      <Link>rpupdaterform.designer.cs</Link>
+      <DependentUpon>rpupdaterform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="..\rpcombobox.cs">
+      <Link>rpcombobox.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="..\rpdataprogress.resx">
+      <Link>rpdataprogress.resx</Link>
+      <DependentUpon>rpdataprogress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\rppreviewmeta.resx">
+      <Link>rppreviewmeta.resx</Link>
+      <DependentUpon>rppreviewmeta.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\rpprogressbar.resx">
+      <Link>rpprogressbar.resx</Link>
+      <DependentUpon>rpprogressbar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\rpreportprogress.resx">
+      <Link>rpreportprogress.resx</Link>
+      <DependentUpon>rpreportprogress.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="..\rpgroupbox.Designer.cs">
+      <DependentUpon>rpgroupbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\rpinputbox.Designer.cs">
+      <DependentUpon>rpinputbox.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\rpinputbox.resx">
+      <Link>rpinputbox.resx</Link>
+      <DependentUpon>rpinputbox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\rpmessageboxerror.resx">
+      <Link>rpmessageboxerror.resx</Link>
+      <DependentUpon>rpmessageboxerror.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\rppreviewformscontrol.resx">
+      <Link>rppreviewformscontrol.resx</Link>
+      <DependentUpon>rppreviewformscontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\rpprinterconfig.resx">
+      <Link>rpprinterconfig.resx</Link>
+      <DependentUpon>rpprinterconfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\rpscreenkeyboard.resx">
+      <Link>rpscreenkeyboard.resx</Link>
+      <DependentUpon>rpscreenkeyboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\rpsignaturecontrol.resx">
+      <Link>rpsignaturecontrol.resx</Link>
+      <DependentUpon>rpsignaturecontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\rpupdaterform.resx">
+      <Link>rpupdaterform.resx</Link>
+      <DependentUpon>rpupdaterform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="previewmetafile.ico">
+      <CustomToolNamespace>Reportman.Drawing.Forms</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Reportman.Drawing2010\Reportman.Drawing.csproj">
+      <Project>{BC83096A-1A88-423D-A5CD-EC341290BDDD}</Project>
+      <Name>Reportman.Drawing</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left_2_empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right_4_empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dropdown_7.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
