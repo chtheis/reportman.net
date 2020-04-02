@@ -369,8 +369,16 @@ namespace Reportman.Designer
         lcat.Add(Translator.TranslateStr(1201));
         if (lvalues != null)
             lvalues.Add(FDataInfo.SQL);
+        // OpenOnStart
+        lnames.Add(Translator.TranslateStr(1373));
+        ltypes.Add(Translator.TranslateStr(568));
+        lhints.Add("refdatainfo.html");
+        lcat.Add(Translator.TranslateStr(1201));
+        if (lvalues != null)
+            lvalues.Add(FDataInfo.OpenOnStart);
     }
-    public override Variant GetProperty(string pname)
+
+        public override Variant GetProperty(string pname)
     {
         // Alias Name
         if (pname == Translator.TranslateStr(518))
@@ -384,6 +392,10 @@ namespace Reportman.Designer
         // SQL
         if (pname == "SQL")
             return FDataInfo.SQL;
+        // Open on start
+        if (pname == Translator.TranslateStr(1373))
+            return FDataInfo.OpenOnStart;
+
         return base.GetProperty(pname);
     }
     public override void SetProperty(string pname, Variant newvalue)
@@ -416,6 +428,12 @@ namespace Reportman.Designer
         if (pname == "SQL")
         {
             FDataInfo.SQL = newvalue.ToString();
+            return;
+        }
+        // Open on start
+        if (pname == Translator.TranslateStr(1373))
+        {
+            FDataInfo.OpenOnStart = (bool)newvalue;
             return;
         }
         // inherited
