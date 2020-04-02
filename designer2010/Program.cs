@@ -30,6 +30,7 @@ namespace Reportman.Designer
         {
             if (Reportman.Reporting.DatabaseInfo.CustomProviderFactories.Count == 0)
             {
+#if REPMAN_FIREBIRD
                 try
                 {
                     Reportman.Reporting.DatabaseInfo.CustomProviderFactories.Add(Reportman.Reporting.DatabaseInfo.FIREBIRD_PROVIDER, FirebirdSql.Data.FirebirdClient.FirebirdClientFactory.Instance);
@@ -39,6 +40,8 @@ namespace Reportman.Designer
                 {
                     System.Console.WriteLine("Error in Firebird provider: " + E.Message);
                 }
+#endif
+#if REPMAN_MYSQL
                 try
                 {
 #if MONODEBUG
@@ -51,6 +54,8 @@ namespace Reportman.Designer
                 {
                     System.Console.WriteLine("Error in MySQL factory: " + E.Message);
                 }
+#endif
+#if REPMAN_SQLITE
                 try
                 {
 #if MONODEBUG
@@ -63,6 +68,7 @@ namespace Reportman.Designer
                 {
                     System.Console.WriteLine("Error in Sqlite factory: " + E.Message);
                 }
+#endif
             }
         }
         // Creates a class to handle the exception event.
