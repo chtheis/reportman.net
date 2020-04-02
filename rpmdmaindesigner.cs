@@ -254,6 +254,9 @@ namespace Reportman.Designer
 
       private void bpreview_Click(object sender, EventArgs e)
       {
+        if (!Reportman.Reporting.Forms.ParamsForm.ShowParams(Report))
+          return;
+
         Report.MetaFile.Clear();
         if (nprintdriver == null)
         {

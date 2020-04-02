@@ -184,6 +184,9 @@ namespace Reportman.Reporting.Forms
             }
             if (!doshow)
                 return true;
+            foreach (Param p in rp.Params)
+                p.UpdateLookupValues();
+
             int MAX_HEIGHT = Screen.PrimaryScreen.Bounds.Height-100;
             bool aresult=false;
             using (ParamsForm fparams = new ParamsForm())
