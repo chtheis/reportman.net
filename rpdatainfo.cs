@@ -155,6 +155,8 @@ namespace Reportman.Reporting
         public static string FIREBIRD_PROVIDER2 = "FirebirdSql.Data.Firebird";
         public static string MYSQL_PROVIDER = "MySql.Data.MySqlClient";
         public static string SQLITE_PROVIDER = "System.Data.SQLite";
+        public static string ODBC_PROVIDER = "System.Data.Odbc";
+        public static string OLEDB_PROVIDER = "System.Data.OleDb";
         private System.Data.IDbConnection FConnection;
         private System.Data.IDbConnection FExternalConnection;
         private System.Data.IDbTransaction IntTransaction;
@@ -339,10 +341,16 @@ namespace Reportman.Reporting
             index = Report.Params.IndexOf(Alias+"_ADOCONNECTIONSTRING");
             if (index > 0)
                 UsedConnectionString = Report.Params[index].Value.ToString();
-			
+
 #if REPMAN_DOTNET2
             if (Driver == DriverType.IBX)
                 this.ProviderFactory = FIREBIRD_PROVIDER;
+            else if (DotNetDriver == DotNetDriverType.OleDb)
+            {
+                this.DotNetDriver = DotNetDriverType.Odbc;
+                this.ProviderFactory = ODBC_PROVIDER;
+                UsedConnectionString = UsedConnectionString.Replace("Provider=MSDASQL.1;", "");
+            }
 			if (this.ProviderFactory.Length == 0)
 				throw new UnNamedException("Provider factory not supplied");
 /*#if REPMAN_MONO
@@ -702,7 +710,7 @@ namespace Reportman.Reporting
 			if (index >= 0)
 				return infos[index];
 			else
-				throw new NamedException("Dabase Alias not found: " + DatabaseAlias,DatabaseAlias);
+				throw new NamedException("Database Alias not found: " + DatabaseAlias,DatabaseAlias);
 		}
         /// <summary>
         /// Obtain field information from the dataset, useful for the designer
@@ -1124,31 +1132,85 @@ namespace Reportman.Reporting
                                 break;
                         }
 				    }
-				    
-				    Command.CommandText = sqlsentence;
-				    OldSQLUsed = sqlsentence;
-				    // Assign parameters
-				    for (int i = 0; i < aparams.Count; i++)
-				    {
-					    Param aparam = aparams[i];
-					    int index = aparam.Datasets.IndexOf(Alias);
-					    if (index >= 0)
-					    {
-						    if ((aparam.ParamType != ParamType.Subst) &&
-                             (aparam.ParamType != ParamType.Multiple)&& (aparam.ParamType != ParamType.SubsExpreList)
-                                 && (aparam.ParamType != ParamType.SubstExpre))
-						    {
-							    System.Data.IDataParameter dbparam = Command.CreateParameter();
-							    //dbparam.ParameterName = "@" + aparam.Alias;
-                                // SQL Server does not like "@" prefix
-                                dbparam.ParameterName = aparam.Alias;
-                                dbparam.Direction = ParameterDirection.Input;
-							    dbparam.DbType = aparam.Value.GetDbType();
-							    dbparam.Value = aparam.LastValue.AsObject();
-							    Command.Parameters.Add(dbparam);
-						    }
-					    }
-				    }
+
+
+                    if (dbitem.DotNetDriver == DotNetDriverType.Odbc)
+                    {
+                        List<String> unnamedParams = new List<String>();
+
+                        int index = sqlsentence.IndexOf('@');
+                        while (index >= 0)
+                        {
+                            // Obtain parameter name
+                            System.Text.StringBuilder pname = new System.Text.StringBuilder();
+                            int index2 = index + 1;
+                            while (index2 < sqlsentence.Length)
+                            {
+                                char caracter = sqlsentence[index2];
+                                if (!(StringUtil.IsAlpha(caracter) && caracter != ' '))
+                                    break;
+                                pname.Append(caracter);
+                                index2++;
+                            }
+                            String s = pname.ToString().ToUpper();
+                            unnamedParams.Add(s);
+                            sqlsentence = sqlsentence.Substring(0, index) + '?' + sqlsentence.Substring(index + 1 + s.Length, sqlsentence.Length - index - 1 - s.Length);
+                            index = sqlsentence.IndexOf('@');
+                        }
+                        Command.CommandText = sqlsentence;
+                        OldSQLUsed = sqlsentence;
+
+                        // Assign parameters
+                        for (int pos = 1; pos <= unnamedParams.Count; ++pos)
+                        {
+                            Param aparam = aparams[aparams.IndexOf(unnamedParams[pos-1])];
+
+                            int index2 = aparam.Datasets.IndexOf(Alias);
+                            if (index2 >= 0)
+                            {
+                                if ((aparam.ParamType != ParamType.Subst) &&
+                                    (aparam.ParamType != ParamType.Multiple) &&
+                                    (aparam.ParamType != ParamType.SubsExpreList) &&
+                                    (aparam.ParamType != ParamType.SubstExpre))
+                                {
+                                    System.Data.IDataParameter dbparam = Command.CreateParameter();
+                                    dbparam.ParameterName = "@p" + pos;
+                                    dbparam.Direction = ParameterDirection.Input;
+                                    dbparam.DbType = aparam.Value.GetDbType();
+                                    dbparam.Value = aparam.LastValue.AsObject();
+                                    Command.Parameters.Add(dbparam);
+                                }
+                            }
+                        }
+                    }
+                    else
+                    {
+                        Command.CommandText = sqlsentence;
+                        OldSQLUsed = sqlsentence;
+                        // Assign parameters
+                        for (int i = 0; i < aparams.Count; i++)
+                        {
+                            Param aparam = aparams[i];
+                            int index = aparam.Datasets.IndexOf(Alias);
+                            if (index >= 0)
+                            {
+                                if ((aparam.ParamType != ParamType.Subst) &&
+                                    (aparam.ParamType != ParamType.Multiple) &&
+                                    (aparam.ParamType != ParamType.SubsExpreList) &&
+                                    (aparam.ParamType != ParamType.SubstExpre))
+                                {
+                                    System.Data.IDataParameter dbparam = Command.CreateParameter();
+                                    dbparam.ParameterName = "@" + aparam.Alias;
+                                    // SQL Server does not like "@" prefix
+                                    // dbparam.ParameterName = aparam.Alias;
+                                    dbparam.Direction = ParameterDirection.Input;
+                                    dbparam.DbType = aparam.Value.GetDbType();
+                                    dbparam.Value = aparam.LastValue.AsObject();
+                                    Command.Parameters.Add(dbparam);
+                                }
+                            }
+                        }
+                    }
 				    if (mastersource != null)
 				    {
 					    UpdateParams(mastersource.Data, Command);
