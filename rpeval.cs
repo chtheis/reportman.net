@@ -735,7 +735,7 @@ namespace Reportman.Reporting
 			{
 				iden = SearchIdentifier(FParser.TokenString());
 				if (iden == null)
-					throw new EvalException(Translator.TranslateStr(440) + FParser.TokenString() + FParser.TokenString(),
+					throw new EvalException(Translator.TranslateStr(440) + FParser.TokenString(),
 						FParser.SourceLine, FParser.SourcePos, "");
 				else
 				{
